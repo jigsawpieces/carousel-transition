@@ -1,6 +1,6 @@
 # Carousel transition effects
 
-This is a short tutorial on how to add in transition effects for the slider carousel.
+This is a short tutorial on how to add in transition effects for the carousel slider.
 
 Our basic carousel markup is structured like this:
 
@@ -18,7 +18,7 @@ Our basic carousel markup is structured like this:
 </section>
 ```
 
-The "hidden" class is added to slides which we want to hide. When we click on either the carousel controls or carousel button, it uses jQuery to add/remove this class the relevant slides. The default CSS values for the class are as follows:
+The **.hidden** class is added to slides which we want to hide. When we click on either the carousel controls or carousel button, jQuery is used to add/remove this class the relevant slides. The default CSS values for the **.hidden** class are as follows:
 
 ```css
 .hidden {
@@ -29,7 +29,7 @@ The "hidden" class is added to slides which we want to hide. When we click on ei
 
 Simply adding CSS transitions to the list item won't work, because CSS transitions doesn't effect the display property (see full answer here: http://stackoverflow.com/a/22103238). Therefore, instead of using **display: block** and **display: none** to hide/show the slides, we need to use **opacity: 1** and **opacity: 0**
 
-Firstly, we need to overwrite the **.hidden** class so that the element is always displayed, but set to **opacity: 0** which it is not shown:
+Firstly, we need to overwrite the **.hidden** class so that the element is always displayed, but set to **opacity: 0** when we don't want it to be shown:
 ```css
 .carousel ul.carouselSlides li.carouselSlide.hidden {
     display: block !important;
@@ -37,7 +37,7 @@ Firstly, we need to overwrite the **.hidden** class so that the element is alway
 }
 ```
 
-Then we need to add the opacity and transition properties to the carousel slides:
+Then we need to add the default opacity and transition properties to the carousel slides itself:
 
 ```css
 .carousel ul.carouselSlides li.carouselSlide  {
@@ -82,8 +82,6 @@ Lastly, don't forget to un-hide the carousel controls!
 - This fix will only work for browsers that support the CSS3 transitions property. For browsers that don't support CSS3 transitions, the slider will still work but without the transition effect. For full list of browser support see: http://caniuse.com/#feat=css-transitions
 - The parent container must have an explict height defined, and overflow set to hidden. 
 - Slide list items must be absolutely positioned in order to create the fade in/out effect.
-- Currently working on infinite scrolling carousel!
-
 
 
 
