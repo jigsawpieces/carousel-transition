@@ -76,6 +76,9 @@ Lastly, don't forget to un-hide the carousel controls!
 
 ```
 
+### Files
+
+- See the CSS folder for an example of the working CSS files
 
 ### Notes
 
