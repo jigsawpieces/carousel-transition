@@ -1,0 +1,31 @@
+.carousel ul.carouselSlides {
+
+  overflow: hidden;
+  position: relative;
+  height: 450px;
+
+}
+
+.carousel ul.carouselSlides li.carouselSlide {
+  
+  display: block;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: opacity 1s ease-in-out;
+
+}
+
+.carousel ul.carouselSlides li.carouselSlide.hidden {
+
+  display: block !important;
+  opacity: 0;
+
+}
+
+.carousel .carouselControls {
+  display: block;
+
+}
