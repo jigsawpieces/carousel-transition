@@ -78,7 +78,7 @@ Lastly, don't forget to un-hide the carousel controls!
 
 ### Files
 
-- See the CSS folder for an example of the working CSS files
+- See the CSS folder for CSS and SASS files
 
 ### Notes
 
